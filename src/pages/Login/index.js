@@ -4,14 +4,14 @@ import logo from '../../../assets/logo.png'
 
 import GoogleButton from '../../components/google_button.js'
 
-export default function Login() {
+export default function Login({ navigation }) {
   return (
     <View style={styles.container}>
       <Image source={logo} style={styles.logo} />
       <Text style={styles.text}>Sua Biblioteca Digital Pessoal</Text>
       <View style={styles.bar}></View>
       <Text style={styles.text}>Entre com</Text>
-      <GoogleButton />
+      <GoogleButton navigation={navigation} />
     </View>
   );
 }
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     gap: 10,
   },
   logo: {
-    width: 200, 
-    height: 200, 
+    width: 200,
+    height: 200,
     resizeMode: 'contain',
   },
   text: {
@@ -34,8 +34,8 @@ const styles = StyleSheet.create({
     color: '#C1AA8B',
   },
   bar: {
-    width: 250, 
-    height: 5, 
+    width: 250,
+    height: 5,
     backgroundColor: '#D0BFA8',
     borderRadius: 100,
   },
